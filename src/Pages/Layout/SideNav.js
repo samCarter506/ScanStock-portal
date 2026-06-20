@@ -12,6 +12,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import InventoryIcon from "@mui/icons-material/Inventory";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import ReceiptIcon from "@mui/icons-material/Receipt";
 import PeopleIcon from "@mui/icons-material/People";
 import StorefrontIcon from '@mui/icons-material/Storefront';
@@ -49,7 +50,7 @@ const menuItems = [
   },
    {
     text: "Outbound",
-    icon: <ReceiptIcon />,
+    icon: <ShoppingCartCheckoutIcon />,
     path: "/outbound"
   },
   {
