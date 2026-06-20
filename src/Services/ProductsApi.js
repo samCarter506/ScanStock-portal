@@ -47,6 +47,11 @@ export const DeleteProduct = async (id) => {
 };
 
 export const ScanProduct = async (barcode)=>{
-    const response = await  Api.get(`/barcode/${barcode}`);
-    return response.data
+    try{
+        const response = await  Api.get(`/barcode/${barcode}`);
+        return response.data
+    }catch(err){
+    console.log(err.message)
+    }
+    
 };
