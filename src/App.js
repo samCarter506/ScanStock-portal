@@ -17,6 +17,9 @@ import Scanner from "./Pages/Products/ScanBarcode";
 import Reports from "./Pages/Reports/Reports";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Outbound from "./Pages/Outbound/Outbound";
+import Profile from './Pages/Account/Profile';
+import ChangePassword from './Pages/Account/Profile';
+import BarcodeGenerator from './Pages/Products/GenerateBarcodes'
 //import Outbound from "./Pages/Outbound/Outbound";
 function App() {
   return (
@@ -27,16 +30,18 @@ function App() {
           element={<Login />}
         />
 
-         <Route element={<MainLayout />}>
-         <Route path="/scanner" element={<Scanner />} />
+        <Route element={<MainLayout />}>
+          <Route path="/scanner" element={<Scanner />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/products" element={<Products />} />
           <Route path="/suppliers" element={<Suppliers />} />
           <Route path="/receipts" element={<Receipts />} />
           <Route path="/outbound" element={<Outbound />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/generateBarcode" element={<BarcodeGenerator />} />
           <Route path="/customers" element={<Customers />} />
-  
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/change-password" element={<ChangePassword />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/users" element={<Users />} />
         </Route>

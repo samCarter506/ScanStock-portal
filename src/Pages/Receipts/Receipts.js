@@ -78,28 +78,25 @@ export default function Receipts() {
         }
     };
 
-    const handleSelectReceipt = async (receipt) => {
-        try {
+  const handleSelectReceipt = async (receipt) => {
+    try {
+        setSelectedReceipt(receipt);
+        setLoadingLines(true);
+        setReceiptLines([]);
 
-            setSelectedReceipt(receipt);
-            setLoadingLines(true);
+        const response = await GetReceiptLinesByReceipt(
+            receipt._id
+        );
 
-            const response =
-                await GetReceiptLinesByReceipt(
-                    receipt._id
-                );
+        setReceiptLines(response.data || []);
 
-            setReceiptLines(
-                response.data || []
-            );
-
-        } catch (err) {
-            console.error(err);
-        } finally {
-            setLoadingLines(false);
-        }
-    };
-
+    } catch (err) {
+        console.error(err);
+        setReceiptLines([]);
+    } finally {
+        setLoadingLines(false);
+    }
+};
     return (
         <Box p={2}>
 

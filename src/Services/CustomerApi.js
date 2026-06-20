@@ -16,8 +16,15 @@ export const CreateCustomer = async (customer) => {
 };
 
 export const UpdateCustomer = async (customer) => {
-    const response = await Api.put(`/customer/${customer.id}`, customer);
-    return response.data;
+
+
+    try {
+        console.log(customer.CustomerCode)
+        const response = await Api.put(`/customer/${customer.CustomerCode}`, customer);
+        return response.data;
+    } catch (err) {
+        console.log(err)
+    }
 };
 
 export const DeleteCustomer = async (id) => {

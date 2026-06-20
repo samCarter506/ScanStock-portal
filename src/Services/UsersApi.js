@@ -33,3 +33,31 @@ export const DeleteUser = async (id) => {
     const response = await Api.delete(`/users/${id}`);
     return response.data;
 };
+
+
+export const GetMyProfile = async () => {
+  const response = await Api.get(
+    "/users/profile/me"
+  );
+
+  console.log("From Get:",response.data)
+  return response.data;
+};
+
+export const UpdateMyProfile = async (profile) => {
+  const response = await Api.put(
+    "/users/profile/me",
+    profile
+  );
+
+  return response.data;
+};
+
+export const ChangeMyPassword = async (passwords) => {
+  const response = await Api.put(
+    "/users/profile/change-password",
+    passwords
+  );
+
+  return response.data;
+};

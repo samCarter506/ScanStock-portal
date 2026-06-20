@@ -14,6 +14,15 @@ export const GetOneProduct  = async (id) => {
     return response.data;
 };
 
+
+export const GenerateBarcode = async (barcode) => {
+  const response = await Api.get(
+    `/product/barcode/${barcode}`
+  );
+
+  return response.data;
+};
+
 export const CreateProduct  = async (product) => {
     const response = await Api.post("/product", product);
     return response.data;

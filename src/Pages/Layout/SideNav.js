@@ -19,7 +19,7 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
-
+import LinkedCameraIcon from '@mui/icons-material/LinkedCamera';
 const menuItems = [
   {
     text: "Products",
@@ -28,8 +28,14 @@ const menuItems = [
   },
   {
     text: "Barcode Scanner",
-    icon: <QrCodeScannerIcon />,
+    icon: <LinkedCameraIcon />,
     path: "/scanner"
+  },
+  ,
+  {
+    text: "Barcodes",
+    icon: <QrCodeScannerIcon />,
+    path: "/generateBarcode"
   },
   {
     text: "Suppliers",

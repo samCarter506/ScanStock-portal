@@ -44,7 +44,6 @@ export const GetReceiptLine = async (id) => {
     const response = await Api.get(`/receiptline/${id}`);
     return response.data;
 };
-
 export const GetReceiptLinesByReceipt = async (receiptId) => {
     const response = await Api.get(
         `/receiptline/receipt/${receiptId}`
@@ -52,6 +51,7 @@ export const GetReceiptLinesByReceipt = async (receiptId) => {
 
     return response.data;
 };
+
 
 export const CreateReceiptLine = async (line) => {
     const response = await Api.post("/receiptline", line);
