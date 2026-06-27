@@ -21,7 +21,13 @@ import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import LinkedCameraIcon from '@mui/icons-material/LinkedCamera';
+import AppsIcon from '@mui/icons-material/Apps';
 const menuItems = [
+  {
+    text: "Dashboard",
+    icon: <AppsIcon />,
+    path: "/dashboard"
+  },
   {
     text: "Products",
     icon: <InventoryIcon />,
